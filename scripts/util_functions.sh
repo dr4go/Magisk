@@ -584,7 +584,7 @@ check_data() {
 
 find_magisk_apk() {
   local DBAPK
-  local PACKAGE=io.github.huskydg.magisk
+  local PACKAGE=io.github.dr4go.main
   [ -z $APK ] && APK=/data/app/${PACKAGE}*/base.apk
   [ -f $APK ] || APK=/data/app/*/${PACKAGE}*/base.apk
   if [ ! -f $APK ]; then

@@ -245,10 +245,7 @@ grep_prop() { return; }
 ##############################
 
 is_delta(){
-if magisk -v | grep -q "\-delta"; then
-    return 0
-fi
-return 1
+return 0
 }
 
 unload_magisk(){

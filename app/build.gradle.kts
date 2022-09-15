@@ -21,7 +21,7 @@ kapt {
 android {
 
     defaultConfig {
-        applicationId = "io.github.huskydg.magisk"
+        applicationId = "io.github.dr4go.main"
         vectorDrawables.useSupportLibrary = true
         versionName = Config.version
         versionCode = Config.versionCode
@@ -30,9 +30,9 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
-            isShrinkResources = true
-            proguardFiles("proguard-rules.pro")
+            isMinifyEnabled = false
+            isShrinkResources = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
 

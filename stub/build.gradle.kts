@@ -14,10 +14,10 @@ android {
     val canary = !Config.version.contains(".")
 
     val url = if (canary) null
-    else "https://huskydg.github.io/download/magisk/${Config.version}.apk"
+    else "https://dr4go.github.io/download/magisk/${Config.version}.apk"
 
     defaultConfig {
-        applicationId = "io.github.huskydg.magisk"
+        applicationId = "io.github.dr4go.main"
         versionCode = 1
         versionName = "1.0"
         buildConfigField("int", "STUB_VERSION", Config.stubVersion)
@@ -26,9 +26,9 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             isShrinkResources = false
-            proguardFiles("proguard-rules.pro")
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
 }
